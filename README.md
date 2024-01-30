@@ -2,6 +2,8 @@
 
 The project is a responsive home page of Aloha trip booking website build using React JS
 
+***https://seclobaloha.netlify.app/***
+
 ## Technologies Used
 
 - React
