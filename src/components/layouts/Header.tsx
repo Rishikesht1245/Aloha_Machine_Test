@@ -3,15 +3,18 @@ import { brandLogo } from "../../assets/images";
 import Button from "../UI/Button";
 import HeaderLinks from "./HeaderLinks";
 import { headerLinks } from "../../data/headerLinks";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 const Header = () => {
   const [menu, setMenu] = useState<boolean>(false);
+  const navigate = useNavigate();
   return (
     <>
       <header className="p-[24px] hidden sm:flex items-center justify-between absolute top-[24px] left-[50%] -translate-x-[50%] h-[80px] section-container rounded-[12px] bg-white">
         {/* Image and nav links */}
         <div className="flex justify-between items-center w-full">
-          <img src={brandLogo} alt="Logo" className="brand-logo" />
+          <Link to={"/"}>
+            <img src={brandLogo} alt="Logo" className="brand-logo" />
+          </Link>
           <HeaderLinks />
         </div>
 
@@ -19,7 +22,8 @@ const Header = () => {
         <div className="w-full flex justify-end">
           <Button
             type="button"
-            className="bg-primary w-auto h-[40px]  text-white"
+            className="bg-primary w-auto h-[40px] text-white hover:bg-white hover:border hover:border-primary hover:text-primary"
+            onClick={() => navigate("/booking")}
           >
             Book a trip
           </Button>
@@ -30,7 +34,9 @@ const Header = () => {
 
       {/* Header for mobile screens */}
       <header className="p-[24px] flex sm:hidden justify-between items-center w-full h-[80px] fixed z-[10] bg-white">
-        <img src={brandLogo} alt="Logo" className="brand-logo" />
+        <Link to={"/"}>
+          <img src={brandLogo} alt="Logo" className="brand-logo" />
+        </Link>
         {!menu && (
           <i
             className="fa-solid fa-bars text-[32px]"
@@ -41,7 +47,7 @@ const Header = () => {
 
       {/* Small devices left nav bar */}
       <div
-        className={`w-[100%] h-full px-[24px] min-h-content py-4 bg-white rounded-md z-40 fixed top-0 transition-all duration-700 flex flex-col justify-start gap-[40px] ${
+        className={`w-[100%] h-full px-[24px] min-h-content py-4 bg-white rounded-md z-40 fixed sm:hidden top-0 transition-all duration-700 flex flex-col justify-start gap-[40px] ${
           menu ? "translate-x-[20px]" : "translate-x-[120%]"
         }`}
       >
@@ -68,7 +74,8 @@ const Header = () => {
           <li>
             <Button
               type="button"
-              className="bg-primary w-auto h-[40px]  text-white"
+              className="bg-primary w-auto h-[40px] text-white hover:bg-white hover:border hover:border-primary hover:text-primary"
+              onClick={() => navigate("/booking")}
             >
               Book a trip
             </Button>
