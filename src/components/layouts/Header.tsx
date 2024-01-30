@@ -59,6 +59,7 @@ const Header = () => {
                   color: isActive ? "#008080" : "",
                 })}
                 to={link.link}
+                onClick={() => setMenu(false)}
               >
                 {link.name}
               </NavLink>
