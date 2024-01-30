@@ -1,29 +1,7 @@
-import { useMemo } from "react";
 import { NavLink } from "react-router-dom";
+import { headerLinks } from "../../data/headerLinks";
 
 const HeaderLinks = () => {
-  const headerLinks: Links = useMemo(
-    () => [
-      {
-        name: "Home",
-        link: "/",
-      },
-      {
-        name: "Surfing",
-        link: "/surfing",
-      },
-      {
-        name: "Hula",
-        link: "/hula",
-      },
-      {
-        name: "Vulcano",
-        link: "/vulcano",
-      },
-    ],
-    []
-  );
-
   const displayLinks =
     headerLinks &&
     headerLinks.map((item: { name: string; link: string }) => (
@@ -40,6 +18,5 @@ const HeaderLinks = () => {
     ));
   return <>{displayLinks}</>;
 };
-type Links = { name: string; link: string }[] | [];
 
 export default HeaderLinks;

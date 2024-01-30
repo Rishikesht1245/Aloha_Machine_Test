@@ -1,8 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&display=swap");
 
 @layer base {
   body {
@@ -10,7 +9,7 @@
     box-sizing: border-box;
   }
   h1 {
-    @apply font-semibold tracking-wider 2xl:text-[140px] md:text-[110px] text-[64px] leading-[80px] md:leading-[120px];
+    @apply font-semibold tracking-wider 2xl:text-[140px] md:text-[110px] sm:text-[64px] text-[48px] leading-[80px] md:leading-[120px];
   }
   h5 {
     @apply font-[700] 2xl:text-[24px] text-[20px] leading-[24px];

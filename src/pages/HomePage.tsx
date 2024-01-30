@@ -7,7 +7,7 @@ const HomePage = () => {
   return (
     <div className="flex flex-col w-full gap-[40px]">
       {/* Hero section */}
-      <section className="w-full lg:h-[560px] sm:h-screen h-[480px]">
+      <section className="w-full lg:h-[560px] sm:h-screen h-[480px] mt-[80px] sm:mt-0">
         <Hero />
       </section>
       {/* Highlights section */}

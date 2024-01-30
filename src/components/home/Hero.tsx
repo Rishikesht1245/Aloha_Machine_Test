@@ -11,7 +11,7 @@ const Hero = () => {
       }}
       className="flex items-center justify-center md:p-0 p-[24px]"
     >
-      <div className="max-w-[724px] w-full 2xl:mt-[176px] mt-[120px]">
+      <div className="max-w-[724px] w-full 2xl:mt-[176px] sm:mt-[120px]">
         <h1 className="text-white text-center">
           <span className="text-white/[0.6]">Welcome</span> <br /> to Hawaii
         </h1>
