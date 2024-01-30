@@ -25,7 +25,7 @@
 }
 
 .section-container {
-  @apply w-full md:max-w-xl lg:max-w-[1136px] mx-auto;
+  @apply w-full lg:max-w-[1136px] mx-auto p-[18px] 2xl:p-0;
 }
 
 .brand-logo {

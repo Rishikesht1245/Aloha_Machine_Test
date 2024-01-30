@@ -3,7 +3,7 @@ import Button from "../UI/Button";
 
 const GuideCard = () => {
   return (
-    <div className="flex justify-between p-[24px] bg-white max-w-[560px] w-full h-[176px]">
+    <div className="flex justify-between p-[24px] bg-white md:max-w-[560px] w-full h-[176px]">
       <div className="flex flex-col justify-between">
         <div>
           <h5 className="text-secondary">Hadwin Malone</h5>
@@ -19,7 +19,7 @@ const GuideCard = () => {
       <img
         src={guide}
         alt="Guide image"
-        className="w-[128px] h-[128px] rounded-full"
+        className="sm:w-[128px] sm:h-[128px] w-[74px] h-[74px] rounded-full"
       />
     </div>
   );
