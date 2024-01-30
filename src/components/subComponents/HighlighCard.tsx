@@ -3,7 +3,7 @@ import { Highlights } from "../../interfaces/data";
 
 const HighlightCard = ({ highlight }: { highlight: Highlights }) => {
   return (
-    <div className="group bg-white shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden rounded-lg w-full sm:w-[368px] h-full sm:h-[340px] p-0">
+    <div className="group bg-white shadow-sm hover:shadow-2xl transition-shadow duration-300 overflow-hidden rounded-lg w-full lg:max-w-[368px] h-full sm:h-[340px] p-0">
       <div className="flex flex-col gap-4">
         <img
           src={highlight?.image}

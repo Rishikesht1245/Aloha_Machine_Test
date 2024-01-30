@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import { highlightsData } from "../../data/highlights";
 import { Highlights } from "../../interfaces/data";
 import Loader from "../UI/Loader";
-import HighlightCard from "../subComponents/HighlighCard";
+import SwiperCard from "../subComponents/SwiperCard";
 
 const HighlightsComponent = () => {
   const [highlights, setHighlights] = useState<Highlights[] | []>([]);
@@ -36,13 +36,7 @@ const HighlightsComponent = () => {
             <h6 className="text-center">No Highlights to show</h6>
           ) : (
             highlights &&
-            highlights.length > 0 && (
-              <div className="flex items-center justify-between gap-[16px]">
-                {highlights?.map((highlight: Highlights) => (
-                  <HighlightCard highlight={highlight} />
-                ))}
-              </div>
-            )
+            highlights.length > 0 && <SwiperCard highlights={highlights} />
           )}
         </div>
       )}

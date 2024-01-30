@@ -16,7 +16,7 @@ const HomePage = () => {
       </section>
 
       {/* Categories and guide section */}
-      <section className="bg-[#E6F2f2] mt-10 pb-8">
+      <section className="bg-[#E6F2f2] mt-2 sm:mt-8 pb-8">
         <div className="section-container flex flex-col md:flex-row gap-[32px] my-[30px] sm:my-[40px]">
           <Categories />
           <Guide />
