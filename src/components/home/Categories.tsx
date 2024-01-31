@@ -7,7 +7,9 @@ const Categories = () => {
       <h6>Categories</h6>
       <div className="flex flex-col gap-[8px]">
         {categories &&
-          categories?.map((category) => <CategoryCard category={category} />)}
+          categories?.map((category) => (
+            <CategoryCard key={category?.id} category={category} />
+          ))}
       </div>
     </div>
   );
